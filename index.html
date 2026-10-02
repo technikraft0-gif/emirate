@@ -1,0 +1,1417 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emirate — Ideas Made Visual | Brand Identity Studio</title>
+    <meta name="description" content="Production-quality portfolio and landing page for freelance graphic designer & brand identity studio Emirate. Specializing in memorable brand identities, tactile packaging, and digital systems." />
+    <meta property="og:title" content="Emirate — Ideas Made Visual | Brand Identity Studio" />
+    <meta property="og:description" content="Production-quality portfolio and landing page for freelance graphic designer & brand identity studio Emirate. Specializing in memorable brand identities, tactile packaging, and digital systems." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0B0B0C" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2244%22 fill=%22%23C6FF3D%22/><text y=%2265%22 font-size=%2252%22 font-family=%22serif%22 font-weight=%22bold%22 text-anchor=%22middle%22 x=%2250%22 fill=%22%230B0B0C%22>E</text></svg>" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Pre-compiled Tailwind & Custom Stylesheet -->
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="bg-ink text-paper font-sans antialiased selection:bg-accent selection:text-ink min-h-screen relative overflow-x-hidden">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent focus:text-ink focus:rounded-md focus:font-mono focus:text-xs">
+      Skip to content
+    </a>
+
+    <!-- Fixed subtle film grain overlay -->
+    <div class="fixed inset-0 pointer-events-none z-40 film-grain" aria-hidden="true"></div>
+
+    <!-- Desktop Custom Cursor -->
+    <div id="cursor" class="custom-cursor hidden md:block" aria-hidden="true"></div>
+
+    <!-- 1. STICKY NAVIGATION -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-ink/75 border-b border-white/10 transition-transform duration-300">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+        <!-- Wordmark -->
+        <a href="#" class="flex items-center gap-2 group focus-visible:ring-2 ring-accent ring-offset-2 ring-offset-ink rounded-lg p-1">
+          <span class="font-sans font-bold text-xl tracking-tight text-paper group-hover:text-accent transition-colors">
+            Emirate<span class="text-stone font-normal">.Studio</span>
+          </span>
+          <span class="w-2 h-2 rounded-full bg-accent inline-block"></span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-paper/70" aria-label="Main Navigation">
+          <a href="#work" class="relative py-1 hover:text-paper transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-accent after:transition-all after:duration-300">Work</a>
+          <a href="#services" class="relative py-1 hover:text-paper transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-accent after:transition-all after:duration-300">Services</a>
+          <a href="#process" class="relative py-1 hover:text-paper transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-accent after:transition-all after:duration-300">Process</a>
+          <a href="#pricing" class="relative py-1 hover:text-paper transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-accent after:transition-all after:duration-300">Pricing</a>
+          <a href="#faq" class="relative py-1 hover:text-paper transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-accent after:transition-all after:duration-300">FAQ</a>
+        </nav>
+
+        <!-- Right Action Button & Mobile Hamburger -->
+        <div class="flex items-center gap-4">
+          <a href="#contact" class="group hidden sm:inline-flex items-center gap-2 bg-accent text-accent-ink font-semibold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(198,255,61,0.25)] focus-visible:ring-2 ring-accent">
+            <span>Start a project</span>
+            <span class="inline-block transition-transform duration-300 group-hover:rotate-45" aria-hidden="true">↗</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="menu-btn" class="md:hidden p-2 rounded-lg text-paper hover:text-accent focus-visible:ring-2 ring-accent" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i id="menu-icon-bars" data-lucide="menu" class="w-6 h-6"></i>
+            <i id="menu-icon-close" data-lucide="x" class="w-6 h-6 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Fullscreen Overlay Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-ink/95 backdrop-blur-2xl flex flex-col justify-between p-8 pt-28 transition-all duration-300 opacity-0 pointer-events-none md:hidden" aria-hidden="true">
+      <nav class="flex flex-col gap-6 text-left" aria-label="Mobile Navigation">
+        <a href="#work" class="mobile-nav-link text-4xl sm:text-5xl font-display text-paper hover:text-accent transition-colors">Work</a>
+        <a href="#services" class="mobile-nav-link text-4xl sm:text-5xl font-display text-paper hover:text-accent transition-colors">Services</a>
+        <a href="#process" class="mobile-nav-link text-4xl sm:text-5xl font-display text-paper hover:text-accent transition-colors">Process</a>
+        <a href="#pricing" class="mobile-nav-link text-4xl sm:text-5xl font-display text-paper hover:text-accent transition-colors">Pricing</a>
+        <a href="#faq" class="mobile-nav-link text-4xl sm:text-5xl font-display text-paper hover:text-accent transition-colors">FAQ</a>
+        <a href="#contact" class="mobile-nav-link text-4xl sm:text-5xl font-display italic text-accent hover:underline">Start a project ↗</a>
+      </nav>
+      <div class="border-t border-white/10 pt-6 flex justify-between items-center text-xs font-mono text-stone">
+        <span>Emirate — Ideas Made Visual</span>
+        <span>© 2026</span>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT WRAPPER -->
+    <main id="main-content">
+      <!-- 2. HERO SECTION -->
+      <section class="min-h-[92vh] flex flex-col justify-center relative pt-28 pb-16 md:py-32 overflow-hidden border-b border-white/10" aria-label="Introduction">
+        <!-- Radial glow for atmospheric depth -->
+        <div class="absolute -top-40 -left-40 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[140px] pointer-events-none" aria-hidden="true"></div>
+        <div class="absolute top-1/2 -right-40 w-[500px] h-[500px] bg-white/[0.03] rounded-full blur-[120px] pointer-events-none" aria-hidden="true"></div>
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <!-- Left Hero Content -->
+          <div class="lg:col-span-7 flex flex-col items-start" data-reveal>
+            <!-- Availability Badge -->
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-paper/90 mb-8 backdrop-blur-md">
+              <span class="w-2 h-2 rounded-full bg-accent pulse-dot" aria-hidden="true"></span>
+              <span>Booking projects for November</span>
+            </div>
+
+            <!-- Hero Headline -->
+            <h1 class="text-5xl sm:text-7xl lg:text-[7.5rem] xl:text-[8.5rem] leading-[0.92] tracking-tight font-sans font-semibold text-paper mb-8" style="text-wrap: balance;">
+              I design brands people <span class="font-display italic font-normal text-accent">remember</span>.
+            </h1>
+
+            <!-- Sub-copy -->
+            <p class="text-base sm:text-lg md:text-xl text-paper/70 max-w-xl leading-relaxed mb-10">
+              Independent graphic designer & brand identity studio partnering with ambitious founders to translate vision into distinctive, enduring visual systems.
+            </p>
+
+            <!-- Hero CTAs -->
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="#contact" class="group inline-flex items-center gap-2 bg-accent text-accent-ink font-semibold text-sm uppercase tracking-wider px-7 py-3.5 rounded-full transition-all duration-300 hover:scale-105 shadow-[0_0_24px_rgba(198,255,61,0.3)] focus-visible:ring-2 ring-accent">
+                <span>Start a project</span>
+                <span class="inline-block transition-transform duration-300 group-hover:rotate-45" aria-hidden="true">↗</span>
+              </a>
+              <a href="#work" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/20 text-paper text-sm font-medium hover:bg-white/5 hover:border-white/40 transition-colors focus-visible:ring-2 ring-accent">
+                <span>View work</span>
+                <span class="text-stone" aria-hidden="true">↓</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Floating Work Showcase Cards -->
+          <div class="lg:col-span-5 relative h-80 sm:h-96 lg:h-[480px] flex items-center justify-center" aria-hidden="true">
+            <!-- Card 1: Brand Packaging -->
+            <div class="float-card-1 absolute w-56 sm:w-64 aspect-[4/5] bg-ink-2 rounded-card border border-white/15 overflow-hidden shadow-2xl z-20 left-4 sm:left-10">
+              <picture>
+  <source type="image/avif" srcset="/src/assets/images/project_solstice_packaging_1790895135186-640w.avif 640w, /src/assets/images/project_solstice_packaging_1790895135186-1200w.avif 1200w" sizes="(max-width: 640px) 224px, 256px">
+  <source type="image/webp" srcset="/src/assets/images/project_solstice_packaging_1790895135186-640w.webp 640w, /src/assets/images/project_solstice_packaging_1790895135186-1200w.webp 1200w" sizes="(max-width: 640px) 224px, 256px">
+  <img src="/src/assets/images/project_solstice_packaging_1790895135186.webp" alt="Packaging design preview" class="w-full h-full object-cover" loading="lazy" width="256" height="320" />
+</picture>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4">
+                <span class="text-[10px] font-mono text-accent uppercase tracking-widest">Packaging</span>
+                <p class="text-xs font-semibold text-paper">Solstice Botanics</p>
+              </div>
+            </div>
+
+            <!-- Card 2: Editorial Monograph -->
+            <div class="float-card-2 absolute w-60 sm:w-72 aspect-[4/3] bg-ink-2 rounded-card border border-white/20 overflow-hidden shadow-2xl z-30 right-2 sm:right-6 top-8">
+              <picture>
+  <source type="image/avif" srcset="/src/assets/images/project_monolith_editorial_1790895145539-640w.avif 640w, /src/assets/images/project_monolith_editorial_1790895145539-1200w.avif 1200w" sizes="(max-width: 640px) 224px, 256px">
+  <source type="image/webp" srcset="/src/assets/images/project_monolith_editorial_1790895145539-640w.webp 640w, /src/assets/images/project_monolith_editorial_1790895145539-1200w.webp 1200w" sizes="(max-width: 640px) 224px, 256px">
+  <img src="/src/assets/images/project_monolith_editorial_1790895145539.webp" alt="Editorial publication preview" class="w-full h-full object-cover" loading="lazy" width="256" height="320" />
+</picture>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4">
+                <span class="text-[10px] font-mono text-accent uppercase tracking-widest">Editorial & Monograph</span>
+                <p class="text-xs font-semibold text-paper">Monolith Architectural Annual</p>
+              </div>
+            </div>
+
+            <!-- Card 3: Kinetic Identity -->
+            <div class="float-card-3 absolute w-52 sm:w-60 aspect-square bg-ink-2 rounded-card border border-white/15 overflow-hidden shadow-2xl z-10 bottom-2 sm:bottom-6 right-16">
+              <picture>
+  <source type="image/avif" srcset="/src/assets/images/project_aura_digital_1790895154017-640w.avif 640w, /src/assets/images/project_aura_digital_1790895154017-1200w.avif 1200w" sizes="(max-width: 640px) 224px, 256px">
+  <source type="image/webp" srcset="/src/assets/images/project_aura_digital_1790895154017-640w.webp 640w, /src/assets/images/project_aura_digital_1790895154017-1200w.webp 1200w" sizes="(max-width: 640px) 224px, 256px">
+  <img src="/src/assets/images/project_aura_digital_1790895154017.webp" alt="Digital campaign preview" class="w-full h-full object-cover" loading="lazy" width="256" height="320" />
+</picture>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-3">
+                <span class="text-[10px] font-mono text-accent uppercase tracking-widest">Visual System</span>
+                <p class="text-xs font-semibold text-paper">Aura Sound Dynamics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 w-full mt-12 flex items-center justify-between text-xs font-mono text-stone" data-reveal>
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-[1px] bg-stone/40"></span>
+            <span>SCROLL TO EXPLORE</span>
+          </div>
+          <span class="hidden sm:inline">EMIRATE STUDIO · VERIFIED IDENTITY CRAFT</span>
+        </div>
+      </section>
+
+      <!-- 3. LOGO MARQUEE -->
+      <section class="border-b border-white/10 py-8 bg-ink-2/30 relative overflow-hidden" aria-label="Clients & Partners">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 mb-4">
+          <p class="text-[11px] font-mono uppercase tracking-[0.25em] text-stone">Trusted by teams at</p>
+        </div>
+        <!-- Infinite marquee track with edge fade mask -->
+        <div class="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div class="animate-marquee flex items-center gap-16 md:gap-24 text-stone/60 font-sans tracking-widest uppercase font-semibold text-base sm:text-lg select-none whitespace-nowrap">
+            <span class="hover:text-paper transition-colors duration-200">AURA AUDIO</span>
+            <span class="font-serif italic text-xl tracking-normal text-stone/70 hover:text-paper transition-colors duration-200">Solstice</span>
+            <span class="font-mono tracking-tighter hover:text-paper transition-colors duration-200">[KROMA_ARCH]</span>
+            <span class="font-sans font-bold hover:text-paper transition-colors duration-200">VELA VENTURES</span>
+            <span class="font-serif hover:text-paper transition-colors duration-200">Monolith Review</span>
+            <span class="tracking-widest font-light hover:text-paper transition-colors duration-200">NEXUS ORBIT</span>
+            <span class="hover:text-paper transition-colors duration-200">SYNERGY LABS</span>
+            <span class="font-serif italic hover:text-paper transition-colors duration-200">Atelier Form</span>
+
+            <!-- Duplicate set for infinite loop -->
+            <span class="hover:text-paper transition-colors duration-200">AURA AUDIO</span>
+            <span class="font-serif italic text-xl tracking-normal text-stone/70 hover:text-paper transition-colors duration-200">Solstice</span>
+            <span class="font-mono tracking-tighter hover:text-paper transition-colors duration-200">[KROMA_ARCH]</span>
+            <span class="font-sans font-bold hover:text-paper transition-colors duration-200">VELA VENTURES</span>
+            <span class="font-serif hover:text-paper transition-colors duration-200">Monolith Review</span>
+            <span class="tracking-widest font-light hover:text-paper transition-colors duration-200">NEXUS ORBIT</span>
+            <span class="hover:text-paper transition-colors duration-200">SYNERGY LABS</span>
+            <span class="font-serif italic hover:text-paper transition-colors duration-200">Atelier Form</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. SELECTED WORK (BENTO GRID) -->
+      <section id="work" class="py-24 md:py-36 border-b border-white/10" aria-labelledby="work-heading">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6" data-reveal>
+            <div>
+              <p class="font-mono text-xs uppercase tracking-[0.2em] text-stone mb-3">01 — Selected work</p>
+              <h2 id="work-heading" class="text-4xl md:text-6xl tracking-tight font-sans font-semibold text-paper" style="text-wrap: balance;">
+                Work that <span class="font-display italic font-normal text-accent">moves</span> the needle.
+              </h2>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-wider text-accent hover:underline group">
+              <span>See all projects</span>
+              <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <!-- Category Filter Bar with fluid transitions -->
+          <div class="flex flex-wrap items-center gap-2 mb-10 pb-6 border-b border-white/10" id="work-filters" role="tablist" aria-label="Filter portfolio projects" data-reveal>
+            <button class="filter-btn active px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-200 bg-accent text-accent-ink font-semibold focus-visible:ring-2 ring-accent" data-filter="all">All (6)</button>
+            <button class="filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-200 bg-white/5 text-paper/70 hover:text-paper hover:bg-white/10 focus-visible:ring-2 ring-accent" data-filter="brand-identity">Brand Identity</button>
+            <button class="filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-200 bg-white/5 text-paper/70 hover:text-paper hover:bg-white/10 focus-visible:ring-2 ring-accent" data-filter="packaging">Packaging</button>
+            <button class="filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-200 bg-white/5 text-paper/70 hover:text-paper hover:bg-white/10 focus-visible:ring-2 ring-accent" data-filter="editorial">Editorial</button>
+            <button class="filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-200 bg-white/5 text-paper/70 hover:text-paper hover:bg-white/10 focus-visible:ring-2 ring-accent" data-filter="social">Social & Motion</button>
+            <button class="filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-200 bg-white/5 text-paper/70 hover:text-paper hover:bg-white/10 focus-visible:ring-2 ring-accent" data-filter="digital">Digital Flagship</button>
+          </div>
+
+          <!-- Bento Grid: 6 Projects with Interactive Click-to-Modal -->
+          <div class="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6" id="bento-grid">
+            <!-- Project 1: Span 4 (Large Primary Feature) -->
+            <article class="bento-card md:col-span-4 group relative bg-ink-2 rounded-card overflow-hidden border border-white/10 aspect-[16/10] sm:aspect-[16/9] cursor-pointer transition-all duration-300" data-category="brand-identity" data-project="0" data-reveal tabindex="0" role="button" aria-label="Inspect Kroma Architecture case study">
+              <picture>
+  <source type="image/avif" srcset="/src/assets/images/project_kroma_identity_1790895123334-640w.avif 640w, /src/assets/images/project_kroma_identity_1790895123334-1200w.avif 1200w, /src/assets/images/project_kroma_identity_1790895123334-1376w.avif 1376w" sizes="(max-width: 768px) 100vw, 66vw">
+  <source type="image/webp" srcset="/src/assets/images/project_kroma_identity_1790895123334-640w.webp 640w, /src/assets/images/project_kroma_identity_1790895123334-1200w.webp 1200w, /src/assets/images/project_kroma_identity_1790895123334-1376w.webp 1376w" sizes="(max-width: 768px) 100vw, 66vw">
+  <img src="/src/assets/images/project_kroma_identity_1790895123334.webp" alt="Kroma Architecture Brand Identity" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" width="1376" height="768" />
+</picture>
+              <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              
+              <!-- Floating Top Right Action -->
+              <div class="absolute top-6 right-6 px-3.5 py-1.5 rounded-full bg-accent text-accent-ink flex items-center gap-1.5 font-mono text-xs font-bold opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                <span>Inspect</span>
+                <span aria-hidden="true">↗</span>
+              </div>
+
+              <!-- Caption -->
+              <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 transform transition-transform duration-300">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="font-mono text-[11px] uppercase tracking-wider text-accent">Brand Identity</span>
+                  <span class="text-stone">·</span>
+                  <span class="font-mono text-[11px] text-stone">2026</span>
+                  <span class="text-stone">·</span>
+                  <span class="font-mono text-[11px] text-stone">Zurich</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-semibold text-paper group-hover:text-accent transition-colors">
+                  Kroma Architecture & Spatial Identity
+                </h3>
+                <p class="text-paper/70 text-sm mt-1 max-w-lg hidden sm:block">
+                  Complete brand metamorphosis, embossed stationery system, and signage for an avant-garde architectural firm in Zurich.
+                </p>
+              </div>
+            </article>
+
+            <!-- Project 2: Span 2 (Vertical Feature) -->
+            <article class="bento-card md:col-span-2 group relative bg-ink-2 rounded-card overflow-hidden border border-white/10 aspect-[4/5] md:aspect-auto cursor-pointer transition-all duration-300" data-category="packaging" data-project="1" data-reveal tabindex="0" role="button" aria-label="Inspect Solstice Botanics case study">
+              <picture>
+  <source type="image/avif" srcset="/src/assets/images/project_solstice_packaging_1790895135186-640w.avif 640w, /src/assets/images/project_solstice_packaging_1790895135186-1200w.avif 1200w" sizes="(max-width: 768px) 100vw, 33vw">
+  <source type="image/webp" srcset="/src/assets/images/project_solstice_packaging_1790895135186-640w.webp 640w, /src/assets/images/project_solstice_packaging_1790895135186-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw">
+  <img src="/src/assets/images/project_solstice_packaging_1790895135186.webp" alt="Solstice Botanics Packaging" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" width="1200" height="896" />
+</picture>
+              <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              
+              <div class="absolute top-6 right-6 px-3.5 py-1.5 rounded-full bg-accent text-accent-ink flex items-center gap-1.5 font-mono text-xs font-bold opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                <span>Inspect</span>
+                <span aria-hidden="true">↗</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="font-mono text-[11px] uppercase tracking-wider text-accent">Packaging</span>
+                  <span class="text-stone">·</span>
+                  <span class="font-mono text-[11px] text-stone">2025</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-semibold text-paper group-hover:text-accent transition-colors">
+                  Solstice Botanics
+                </h3>
+                <p class="text-paper/70 text-xs mt-1">
+                  Tactile amber glass bottles with bespoke typography and sustainable blind-debossed unboxing cartons.
+                </p>
+              </div>
+            </article>
+
+            <!-- Project 3: Span 2 -->
+            <article class="bento-card md:col-span-2 group relative bg-ink-2 rounded-card overflow-hidden border border-white/10 aspect-[4/3] cursor-pointer transition-all duration-300" data-category="editorial" data-project="2" data-reveal tabindex="0" role="button" aria-label="Inspect Monolith Review case study">
+              <picture>
+  <source type="image/avif" srcset="/src/assets/images/project_monolith_editorial_1790895145539-640w.avif 640w, /src/assets/images/project_monolith_editorial_1790895145539-1200w.avif 1200w" sizes="(max-width: 768px) 100vw, 33vw">
+  <source type="image/webp" srcset="/src/assets/images/project_monolith_editorial_1790895145539-640w.webp 640w, /src/assets/images/project_monolith_editorial_1790895145539-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw">
+  <img src="/src/assets/images/project_monolith_editorial_1790895145539.webp" alt="Monolith Review Editorial Publication" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" width="1200" height="896" />
+</picture>
+              <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              
+              <div class="absolute top-5 right-5 w-9 h-9 rounded-full bg-accent text-accent-ink flex items-center justify-center font-bold text-sm opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                ↗
+              </div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="font-mono text-[11px] uppercase tracking-wider text-accent">Editorial</span>
+                  <span class="text-stone">·</span>
+                  <span class="font-mono text-[11px] text-stone">2025</span>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold text-paper group-hover:text-accent transition-colors">
+                  Monolith Review
+                </h3>
+                <p class="text-paper/70 text-xs mt-1">320-page hardcover publication crafted for the Venice Biennale.</p>
+              </div>
+            </article>
+
+            <!-- Project 4: Span 2 -->
+            <article class="bento-card md:col-span-2 group relative bg-ink-2 rounded-card overflow-hidden border border-white/10 aspect-[4/3] cursor-pointer transition-all duration-300" data-category="social" data-project="3" data-reveal tabindex="0" role="button" aria-label="Inspect Aura Kinetic Campaign case study">
+              <picture>
+  <source type="image/avif" srcset="/src/assets/images/project_aura_digital_1790895154017-640w.avif 640w, /src/assets/images/project_aura_digital_1790895154017-1200w.avif 1200w" sizes="(max-width: 768px) 100vw, 33vw">
+  <source type="image/webp" srcset="/src/assets/images/project_aura_digital_1790895154017-640w.webp 640w, /src/assets/images/project_aura_digital_1790895154017-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw">
+  <img src="/src/assets/images/project_aura_digital_1790895154017.webp" alt="Aura Sound Kinetic Campaign" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" width="1200" height="896" />
+</picture>
+              <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              
+              <div class="absolute top-5 right-5 w-9 h-9 rounded-full bg-accent text-accent-ink flex items-center justify-center font-bold text-sm opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                ↗
+              </div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="font-mono text-[11px] uppercase tracking-wider text-accent">Social & Motion</span>
+                  <span class="text-stone">·</span>
+                  <span class="font-mono text-[11px] text-stone">2026</span>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold text-paper group-hover:text-accent transition-colors">
+                  Aura Kinetic Campaign
+                </h3>
+                <p class="text-paper/70 text-xs mt-1">Algorithmic motion posters & audio-reactive brand system.</p>
+              </div>
+            </article>
+
+            <!-- Project 5: Span 2 -->
+            <article class="bento-card md:col-span-2 group relative bg-ink-2 rounded-card overflow-hidden border border-white/10 aspect-[4/3] cursor-pointer transition-all duration-300" data-category="brand-identity" data-project="4" data-reveal tabindex="0" role="button" aria-label="Inspect Nexus Orbit case study">
+              <div class="w-full h-full bg-gradient-to-br from-[#1b1c20] to-[#0c0d0f] flex items-center justify-center p-8 transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="text-center">
+                  <div class="w-16 h-16 mx-auto mb-3 border-2 border-accent rounded-full flex items-center justify-center font-display italic text-3xl text-accent">
+                    N
+                  </div>
+                  <span class="font-mono text-[10px] text-stone tracking-widest uppercase">Grid & Glyph Matrix</span>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              
+              <div class="absolute top-5 right-5 w-9 h-9 rounded-full bg-accent text-accent-ink flex items-center justify-center font-bold text-sm opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                ↗
+              </div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="font-mono text-[11px] uppercase tracking-wider text-accent">Logo System</span>
+                  <span class="text-stone">·</span>
+                  <span class="font-mono text-[11px] text-stone">2026</span>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold text-paper group-hover:text-accent transition-colors">
+                  Nexus Orbit Adaptive Mark
+                </h3>
+                <p class="text-paper/70 text-xs mt-1">Variable responsive mark for next-gen aerospace consultancy.</p>
+              </div>
+            </article>
+
+            <!-- Project 6: Span 6 (Wide Digital UI Feature) -->
+            <article class="bento-card md:col-span-6 group relative bg-ink-2 rounded-card overflow-hidden border border-white/10 aspect-[21/9] cursor-pointer transition-all duration-300" data-category="digital" data-project="5" data-reveal tabindex="0" role="button" aria-label="Inspect Vela Ventures case study">
+              <div class="w-full h-full bg-[#121316] relative flex items-center justify-center overflow-hidden">
+                <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#C6FF3D_1px,transparent_1px)] [background-size:24px_24px]"></div>
+                <div class="relative z-10 text-center px-6">
+                  <p class="font-mono text-xs uppercase tracking-widest text-accent mb-2">Web UI & Design System</p>
+                  <h3 class="text-3xl md:text-5xl font-display font-normal text-paper mb-3">Vela Ventures Digital Flagship</h3>
+                  <p class="text-stone max-w-md mx-auto text-xs sm:text-sm">Fluid component system, darkroom micro-interactions, and conversion-engineered editorial web experience.</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-60"></div>
+              
+              <div class="absolute top-6 right-6 px-3.5 py-1.5 rounded-full bg-accent text-accent-ink flex items-center gap-1.5 font-mono text-xs font-bold opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                <span>Inspect</span>
+                <span aria-hidden="true">↗</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- BEFORE / AFTER BRAND TRANSFORMATION SLIDER -->
+          <div class="mt-20 pt-16 border-t border-white/10" data-reveal>
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+              <div>
+                <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-2">Interactive Transformation Study</p>
+                <h3 class="text-3xl sm:text-4xl md:text-5xl font-sans font-semibold tracking-tight text-paper">
+                  From indistinct to <span class="font-display italic font-normal text-accent">unforgettable</span>.
+                </h3>
+              </div>
+              <p class="text-xs font-mono text-stone max-w-xs">
+                Drag the divider below to compare the original 2018 seed startup branding against the 2026 Swiss architectural identity.
+              </p>
+            </div>
+
+            <!-- Interactive Comparison Viewer -->
+            <div class="relative w-full aspect-[16/10] sm:aspect-[21/9] rounded-card overflow-hidden border border-white/15 bg-ink select-none shadow-2xl" id="ba-container">
+              <!-- "After" Image (Underneath) -->
+              <picture>
+  <source type="image/avif" srcset="/src/assets/images/project_kroma_identity_1790895123334-640w.avif 640w, /src/assets/images/project_kroma_identity_1790895123334-1200w.avif 1200w, /src/assets/images/project_kroma_identity_1790895123334-1376w.avif 1376w" sizes="100vw">
+  <source type="image/webp" srcset="/src/assets/images/project_kroma_identity_1790895123334-640w.webp 640w, /src/assets/images/project_kroma_identity_1790895123334-1200w.webp 1200w, /src/assets/images/project_kroma_identity_1790895123334-1376w.webp 1376w" sizes="100vw">
+  <img src="/src/assets/images/project_kroma_identity_1790895123334.webp" alt="After rebrand: Kroma Architecture luxury stationery and debossed identity" class="absolute inset-0 w-full h-full object-cover" width="1376" height="768" />
+</picture>
+              <div class="absolute top-4 right-4 z-20 px-3 py-1.5 rounded-full bg-ink/80 backdrop-blur-md border border-accent/40 text-accent font-mono text-xs uppercase tracking-wider">
+                2026 · Emirate Rebrand
+              </div>
+
+              <!-- "Before" Image (Clipped Layer on Top) -->
+              <div id="ba-clipped-layer" class="absolute inset-0 w-full h-full overflow-hidden" style="clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);">
+                <picture>
+  <source type="image/avif" srcset="/src/assets/images/before_kroma_brand_1790910193624-640w.avif 640w, /src/assets/images/before_kroma_brand_1790910193624-1200w.avif 1200w, /src/assets/images/before_kroma_brand_1790910193624-1376w.avif 1376w" sizes="100vw">
+  <source type="image/webp" srcset="/src/assets/images/before_kroma_brand_1790910193624-640w.webp 640w, /src/assets/images/before_kroma_brand_1790910193624-1200w.webp 1200w, /src/assets/images/before_kroma_brand_1790910193624-1376w.webp 1376w" sizes="100vw">
+  <img src="/src/assets/images/before_kroma_brand_1790910193624.webp" alt="Before rebrand: Generic startup stationery from 2018" class="absolute inset-0 w-full h-full object-cover filter grayscale contrast-125" width="1376" height="768" />
+</picture>
+                <div class="absolute top-4 left-4 z-20 px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-stone font-mono text-xs uppercase tracking-wider">
+                  2018 · Pre-Seed Clutter
+                </div>
+              </div>
+
+              <!-- Interactive Divider Line & Handle -->
+              <div id="ba-handle" class="absolute top-0 bottom-0 z-30 flex items-center justify-center pointer-events-none -translate-x-1/2" style="left: 50%;">
+                <div class="w-[2px] h-full bg-accent shadow-[0_0_12px_#C6FF3D]"></div>
+                <div class="absolute w-10 h-10 rounded-full bg-accent text-accent-ink font-bold text-xs flex items-center justify-center shadow-xl border-2 border-ink">
+                  ⟷
+                </div>
+              </div>
+
+              <!-- Transparent Range Input for Touch / Mouse / Accessibility -->
+              <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-40" id="ba-range" aria-label="Before and after rebrand comparison slider" />
+            </div>
+
+            <!-- Transformation Metrics Strip -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+              <div class="p-4 bg-ink-2/60 rounded-xl border border-white/5 flex items-center gap-3">
+                <span class="text-accent font-display italic text-2xl">+340%</span>
+                <span class="text-xs text-stone font-mono uppercase tracking-wider">Series A Inbound Investor Conversion</span>
+              </div>
+              <div class="p-4 bg-ink-2/60 rounded-xl border border-white/5 flex items-center gap-3">
+                <span class="text-accent font-display italic text-2xl">100%</span>
+                <span class="text-xs text-stone font-mono uppercase tracking-wider">Custom Debossed Vector Architecture</span>
+              </div>
+              <div class="p-4 bg-ink-2/60 rounded-xl border border-white/5 flex items-center gap-3">
+                <span class="text-accent font-display italic text-2xl">40+</span>
+                <span class="text-xs text-stone font-mono uppercase tracking-wider">Unified Touchpoints & Physical Signage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. SERVICES -->
+      <section id="services" class="py-24 md:py-36 border-b border-white/10" aria-labelledby="services-heading">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            <!-- Left Sticky Column -->
+            <div class="lg:col-span-5 lg:sticky lg:top-32 self-start" data-reveal>
+              <p class="font-mono text-xs uppercase tracking-[0.2em] text-stone mb-3">02 — Services</p>
+              <h2 id="services-heading" class="text-4xl md:text-6xl tracking-tight font-sans font-semibold text-paper mb-6" style="text-wrap: balance;">
+                Everything your brand needs, <span class="font-display italic font-normal text-accent">nothing it doesn't</span>.
+              </h2>
+              <p class="text-paper/70 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                No bloated agency layers or boilerplate templates. Every deliverable is custom-crafted to elevate your position in the market and resonate deeply with your highest-value customers.
+              </p>
+              <a href="#contact" class="inline-flex items-center gap-2 bg-paper text-ink font-semibold text-xs uppercase tracking-wider px-6 py-3 rounded-full hover:bg-accent transition-colors focus-visible:ring-2 ring-accent">
+                <span>Inquire about availability</span>
+                <span>↗</span>
+              </a>
+            </div>
+
+            <!-- Right Interactive Services Accordion -->
+            <div class="lg:col-span-7 flex flex-col divide-y divide-white/10 border-y border-white/10" id="services-list" data-reveal>
+              <!-- Service 1 -->
+              <div class="service-item py-8 group cursor-pointer transition-colors" data-service="1">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-baseline gap-6">
+                    <span class="font-mono text-xs text-stone group-hover:text-accent transition-colors">01</span>
+                    <h3 class="text-2xl sm:text-3xl font-semibold text-paper group-hover:text-accent transition-colors">Brand Identity</h3>
+                  </div>
+                  <span class="service-chevron text-stone text-xl transition-transform duration-300 group-hover:text-accent">+</span>
+                </div>
+                <p class="text-stone text-sm sm:text-base mt-2 pl-10 leading-relaxed">
+                  Holistic visual systems built from strategic positioning to create instantly recognizable market presence.
+                </p>
+                <div class="service-deliverables hidden pt-4 pl-10 flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Logo Suite</span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Brand Guidelines (60+ pp)</span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Typography & Color Architecture</span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Digital & Print Asset Suite</span>
+                </div>
+              </div>
+
+              <!-- Service 2 -->
+              <div class="service-item py-8 group cursor-pointer transition-colors" data-service="2">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-baseline gap-6">
+                    <span class="font-mono text-xs text-stone group-hover:text-accent transition-colors">02</span>
+                    <h3 class="text-2xl sm:text-3xl font-semibold text-paper group-hover:text-accent transition-colors">Logo Design & Wordmarks</h3>
+                  </div>
+                  <span class="service-chevron text-stone text-xl transition-transform duration-300 group-hover:text-accent">+</span>
+                </div>
+                <p class="text-stone text-sm sm:text-base mt-2 pl-10 leading-relaxed">
+                  Bespoke vector symbols, custom lettered wordmarks, and adaptive responsive icons built for extreme fidelity.
+                </p>
+                <div class="service-deliverables hidden pt-4 pl-10 flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Primary & Secondary Marks</span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Vector Production Formats</span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">App Favicons & Monograms</span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Copyright Transfer</span>
+                </div>
+              </div>
+
+              <!-- Service 3 -->
+              <div class="service-item py-8 group cursor-pointer transition-colors" data-service="3">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-baseline gap-6">
+                    <span class="font-mono text-xs text-stone group-hover:text-accent transition-colors">03</span>
+                    <h3 class="text-2xl sm:text-3xl font-semibold text-paper group-hover:text-accent transition-colors">Packaging & Tactile Print</h3>
+                  </div>
+                  <span class="service-chevron text-stone text-xl transition-transform duration-300 group-hover:text-accent">+</span>
+                </div>
+                <p class="text-stone text-sm sm:text-base mt-2 pl-10 leading-relaxed">
+                  Structural dielines, unboxing choreography, foil stamping, and foil finishes engineered to delight upon opening.
+                </p>
+                <div class="service-deliverables hidden pt-4 pl-10 flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Dielines & Print Spec Sheets</span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Material & Paper Selection</span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">3D Renders for Retail</span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Manufacturer QA Hand-off</span>
+                </div>
+              </div>
+
+              <!-- Service 4 -->
+              <div class="service-item py-8 group cursor-pointer transition-colors" data-service="4">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-baseline gap-6">
+                    <span class="font-mono text-xs text-stone group-hover:text-accent transition-colors">04</span>
+                    <h3 class="text-2xl sm:text-3xl font-semibold text-paper group-hover:text-accent transition-colors">Social & Campaign Systems</h3>
+                  </div>
+                  <span class="service-chevron text-stone text-xl transition-transform duration-300 group-hover:text-accent">+</span>
+                </div>
+                <p class="text-stone text-sm sm:text-base mt-2 pl-10 leading-relaxed">
+                  Motion-ready design kits, typographic carousels, and editorial templates that stop the thumb on any feed.
+                </p>
+                <div class="service-deliverables hidden pt-4 pl-10 flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Figma Template Library</span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Launch Keynote Visuals</span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Motion Graphics Kits</span>
+                </div>
+              </div>
+
+              <!-- Service 5 -->
+              <div class="service-item py-8 group cursor-pointer transition-colors" data-service="5">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-baseline gap-6">
+                    <span class="font-mono text-xs text-stone group-hover:text-accent transition-colors">05</span>
+                    <h3 class="text-2xl sm:text-3xl font-semibold text-paper group-hover:text-accent transition-colors">Pitch & Presentation Decks</h3>
+                  </div>
+                  <span class="service-chevron text-stone text-xl transition-transform duration-300 group-hover:text-accent">+</span>
+                </div>
+                <p class="text-stone text-sm sm:text-base mt-2 pl-10 leading-relaxed">
+                  High-stakes investor presentations that distill complex market propositions into unmistakable clarity.
+                </p>
+                <div class="service-deliverables hidden pt-4 pl-10 flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Seed / Series A-B Decks</span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Custom Narrative Visuals</span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-paper/80 rounded-full">Interactive Figma/PDF Formats</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. PROCESS -->
+      <section id="process" class="py-24 md:py-36 border-b border-white/10" aria-labelledby="process-heading">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <div class="mb-16" data-reveal>
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-stone mb-3">03 — Process</p>
+            <h2 id="process-heading" class="text-4xl md:text-6xl tracking-tight font-sans font-semibold text-paper" style="text-wrap: balance;">
+              A clear path from <span class="font-display italic font-normal text-accent">hello</span> to launch.
+            </h2>
+          </div>
+
+          <!-- 4 Steps Horizontal / Stacked -->
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+            <!-- Step 1 -->
+            <div class="bg-ink-2 p-8 rounded-card border border-white/10 hover:border-accent/40 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-reveal>
+              <div>
+                <div class="flex items-center justify-between mb-8">
+                  <span class="font-display italic text-5xl text-accent">01</span>
+                  <span class="font-mono text-xs text-stone uppercase tracking-widest">Week 1</span>
+                </div>
+                <h3 class="text-2xl font-semibold text-paper mb-3">Discover</h3>
+                <p class="text-paper/70 text-sm leading-relaxed">
+                  Deep-dive stakeholder audit, market landscape mapping, customer interviews, and brand mood boards.
+                </p>
+              </div>
+              <div class="mt-8 pt-4 border-t border-white/5 text-[11px] font-mono text-stone">Deliverable: Strategic Brief</div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="bg-ink-2 p-8 rounded-card border border-white/10 hover:border-accent/40 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-reveal>
+              <div>
+                <div class="flex items-center justify-between mb-8">
+                  <span class="font-display italic text-5xl text-accent">02</span>
+                  <span class="font-mono text-xs text-stone uppercase tracking-widest">Week 2</span>
+                </div>
+                <h3 class="text-2xl font-semibold text-paper mb-3">Define</h3>
+                <p class="text-paper/70 text-sm leading-relaxed">
+                  Synthesizing visual hypotheses into two sharply differentiated creative directions with sample applications.
+                </p>
+              </div>
+              <div class="mt-8 pt-4 border-t border-white/5 text-[11px] font-mono text-stone">Deliverable: Concept Presentation</div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="bg-ink-2 p-8 rounded-card border border-white/10 hover:border-accent/40 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-reveal>
+              <div>
+                <div class="flex items-center justify-between mb-8">
+                  <span class="font-display italic text-5xl text-accent">03</span>
+                  <span class="font-mono text-xs text-stone uppercase tracking-widest">Weeks 3–4</span>
+                </div>
+                <h3 class="text-2xl font-semibold text-paper mb-3">Design</h3>
+                <p class="text-paper/70 text-sm leading-relaxed">
+                  Fleshing out selected direction across all touchpoints: logos, colors, packaging, collateral, and interactive states.
+                </p>
+              </div>
+              <div class="mt-8 pt-4 border-t border-white/5 text-[11px] font-mono text-stone">Deliverable: Comprehensive System</div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="bg-ink-2 p-8 rounded-card border border-white/10 hover:border-accent/40 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-reveal>
+              <div>
+                <div class="flex items-center justify-between mb-8">
+                  <span class="font-display italic text-5xl text-accent">04</span>
+                  <span class="font-mono text-xs text-stone uppercase tracking-widest">Week 5</span>
+                </div>
+                <h3 class="text-2xl font-semibold text-paper mb-3">Deliver</h3>
+                <p class="text-paper/70 text-sm leading-relaxed">
+                  Production-ready asset generation, comprehensive guidelines handbook, font licenses, and team hand-off call.
+                </p>
+              </div>
+              <div class="mt-8 pt-4 border-t border-white/5 text-[11px] font-mono text-stone">Deliverable: Production Archive</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. ABOUT + STATS -->
+      <section id="about" class="py-24 md:py-36 border-b border-white/10" aria-labelledby="about-heading">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24">
+            <!-- Left Portrait with offset accent outline -->
+            <div class="lg:col-span-5 relative" data-reveal>
+              <div class="absolute -inset-2 rounded-card border-2 border-accent/40 translate-x-3 translate-y-3 -z-10" aria-hidden="true"></div>
+              <div class="relative bg-ink-2 rounded-card overflow-hidden border border-white/15 aspect-[3/4]">
+                <picture>
+  <source type="image/avif" srcset="/src/assets/images/emirate_designer_portrait_1790895112353-640w.avif 640w, /src/assets/images/emirate_designer_portrait_1790895112353-896w.avif 896w" sizes="(max-width: 768px) 100vw, 40vw">
+  <source type="image/webp" srcset="/src/assets/images/emirate_designer_portrait_1790895112353-640w.webp 640w, /src/assets/images/emirate_designer_portrait_1790895112353-896w.webp 896w" sizes="(max-width: 768px) 100vw, 40vw">
+  <img src="/src/assets/images/emirate_designer_portrait_1790895112353.webp" alt="Emirate creative director portrait" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700 ease-out" loading="lazy" width="896" height="1200" />
+</picture>
+              </div>
+            </div>
+
+            <!-- Right Editorial Bio -->
+            <div class="lg:col-span-7" data-reveal>
+              <p class="font-mono text-xs uppercase tracking-[0.2em] text-stone mb-3">04 — About</p>
+              <h2 id="about-heading" class="text-4xl md:text-5xl lg:text-6xl tracking-tight font-sans font-semibold text-paper mb-8" style="text-wrap: balance;">
+                Precision craft, zero fluff. <span class="font-display italic font-normal text-accent">Ideas made visual</span>.
+              </h2>
+              <div class="space-y-6 text-paper/75 text-base md:text-lg leading-relaxed max-w-xl">
+                <p>
+                  I'm Emirate, an independent designer with over eight years crafting distinctive brand systems and tactile products for visionary startups, venture funds, and cultural institutions globally.
+                </p>
+                <p>
+                  I believe that true brand equity isn't born from chasing passing aesthetic micro-trends, but from surgical clarity, uncompromising typography, and obsessive respect for materials.
+                </p>
+              </div>
+
+              <!-- Signature -->
+              <div class="mt-8">
+                <span class="font-display italic text-4xl sm:text-5xl text-accent block">Emirate O.</span>
+                <span class="font-mono text-xs text-stone tracking-widest uppercase mt-1 block">Founder & Creative Director</span>
+              </div>
+
+              <!-- Tools Row -->
+              <div class="mt-10 pt-6 border-t border-white/10 flex flex-wrap items-center gap-2">
+                <span class="text-xs font-mono text-stone mr-2">Core Toolkit:</span>
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-paper">Figma</span>
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-paper">Adobe Illustrator</span>
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-paper">Photoshop</span>
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-paper">After Effects</span>
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-paper">Cinema 4D</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Strip (Counters) -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-12 border-t border-white/10" id="stats-container" data-reveal>
+            <div class="p-6 bg-ink-2/60 rounded-card border border-white/5">
+              <div class="text-4xl sm:text-6xl font-display text-accent mb-2 tabular-nums">
+                <span class="counter" data-target="120">0</span>+
+              </div>
+              <p class="font-mono text-xs uppercase tracking-wider text-stone">Completed Projects</p>
+            </div>
+            <div class="p-6 bg-ink-2/60 rounded-card border border-white/5">
+              <div class="text-4xl sm:text-6xl font-display text-accent mb-2 tabular-nums">
+                <span class="counter" data-target="8">0</span>+
+              </div>
+              <p class="font-mono text-xs uppercase tracking-wider text-stone">Years Experience</p>
+            </div>
+            <div class="p-6 bg-ink-2/60 rounded-card border border-white/5">
+              <div class="text-4xl sm:text-6xl font-display text-accent mb-2 tabular-nums">
+                <span class="counter" data-target="64">0</span>+
+              </div>
+              <p class="font-mono text-xs uppercase tracking-wider text-stone">Global Clients</p>
+            </div>
+            <div class="p-6 bg-ink-2/60 rounded-card border border-white/5">
+              <div class="text-4xl sm:text-6xl font-display text-accent mb-2 tabular-nums">
+                <span class="counter" data-target="4.9" data-decimals="1">0</span>/5
+              </div>
+              <p class="font-mono text-xs uppercase tracking-wider text-stone">Client Rating</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. TESTIMONIALS -->
+      <section class="py-24 md:py-36 border-b border-white/10" aria-labelledby="testimonials-heading">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <div class="flex items-center justify-between mb-16" data-reveal>
+            <div>
+              <p class="font-mono text-xs uppercase tracking-[0.2em] text-stone mb-3">05 — Kind words</p>
+              <h2 id="testimonials-heading" class="text-4xl md:text-6xl tracking-tight font-sans font-semibold text-paper" style="text-wrap: balance;">
+                Voices from founders who <span class="font-display italic font-normal text-accent">dared</span>.
+              </h2>
+            </div>
+            <!-- Prev/Next Quotes Controls -->
+            <div class="hidden sm:flex items-center gap-2">
+              <button id="prev-quote-btn" class="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-paper hover:border-accent hover:text-accent transition-colors" aria-label="Previous testimonial">←</button>
+              <button id="next-quote-btn" class="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-paper hover:border-accent hover:text-accent transition-colors" aria-label="Next testimonial">→</button>
+            </div>
+          </div>
+
+          <!-- Featured Quote Card with dynamic switcher -->
+          <div class="bg-ink-2 rounded-card p-8 md:p-14 border border-white/10 mb-12 relative overflow-hidden" data-reveal>
+            <div id="featured-quote-container" class="transition-opacity duration-300">
+              <blockquote class="text-2xl sm:text-4xl md:text-5xl font-display italic leading-tight text-paper mb-10" id="quote-text">
+                "Emirate transformed our company from an indistinct technical startup into a market authority. The brand system he built directly facilitated our $14M Series A round."
+              </blockquote>
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center font-display italic text-accent text-xl font-bold">
+                  SK
+                </div>
+                <div>
+                  <p class="font-semibold text-paper" id="quote-author">Soren Kjeldsen</p>
+                  <p class="text-stone text-xs font-mono" id="quote-role">Founder & CEO, Kroma Spatial Systems</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3-Column Testimonial Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-ink-2 p-8 rounded-card border border-white/10 flex flex-col justify-between" data-reveal>
+              <div>
+                <div class="flex text-accent text-sm mb-4" aria-label="5 stars">★★★★★</div>
+                <p class="text-paper/80 text-sm leading-relaxed mb-6">
+                  "The tactile packaging Emirate created for Solstice made our product an instant viral sensation on launch day. Flawless attention to print finish."
+                </p>
+              </div>
+              <div class="pt-4 border-t border-white/5">
+                <p class="font-semibold text-paper text-sm">Elena Rostova</p>
+                <p class="text-xs font-mono text-stone">Creative Director, Solstice Botanics</p>
+              </div>
+            </div>
+
+            <div class="bg-ink-2 p-8 rounded-card border border-white/10 flex flex-col justify-between" data-reveal>
+              <div>
+                <div class="flex text-accent text-sm mb-4" aria-label="5 stars">★★★★★</div>
+                <p class="text-paper/80 text-sm leading-relaxed mb-6">
+                  "Working with Emirate was the most painless branding sprint our executive team has ever experienced. 100% on schedule and extraordinarily sharp."
+                </p>
+              </div>
+              <div class="pt-4 border-t border-white/5">
+                <p class="font-semibold text-paper text-sm">Marcus Vance</p>
+                <p class="text-xs font-mono text-stone">Managing Partner, Vela Ventures</p>
+              </div>
+            </div>
+
+            <div class="bg-ink-2 p-8 rounded-card border border-white/10 flex flex-col justify-between" data-reveal>
+              <div>
+                <div class="flex text-accent text-sm mb-4" aria-label="5 stars">★★★★★</div>
+                <p class="text-paper/80 text-sm leading-relaxed mb-6">
+                  "His typography sensitivity is rare. The monograph book design received an architectural publishing award and sold out in two weeks."
+                </p>
+              </div>
+              <div class="pt-4 border-t border-white/5">
+                <p class="font-semibold text-paper text-sm">Astrid Lind</p>
+                <p class="text-xs font-mono text-stone">Chief Curator, Monolith Architecture</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. PACKAGES / PRICING -->
+      <section id="pricing" class="py-24 md:py-36 border-b border-white/10" aria-labelledby="pricing-heading">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-20" data-reveal>
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-stone mb-3">06 — Packages</p>
+            <h2 id="pricing-heading" class="text-4xl md:text-6xl tracking-tight font-sans font-semibold text-paper mb-4" style="text-wrap: balance;">
+              Transparent pricing, <span class="font-display italic font-normal text-accent">no surprises</span>.
+            </h2>
+            <p class="text-paper/70 text-base">Direct rates for ambitious projects. Every tier includes direct collaboration with the principal designer.</p>
+          </div>
+
+          <!-- 3 Pricing Cards -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            <!-- Tier 1: Starter -->
+            <div class="bg-ink-2 rounded-card p-8 md:p-10 border border-white/10 flex flex-col justify-between" data-reveal>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-xl font-semibold text-paper">Starter</h3>
+                  <span class="font-mono text-xs text-stone">2-3 Weeks</span>
+                </div>
+                <div class="mb-4">
+                  <span class="text-xs font-mono text-stone">From</span>
+                  <p class="text-4xl font-bold font-sans text-paper">$2,800</p>
+                </div>
+                <p class="text-paper/70 text-sm mb-8 leading-relaxed">
+                  Ideal for early-stage bootstrapped ventures needing a distinct core symbol and wordmark system.
+                </p>
+                <ul class="space-y-3 text-sm text-paper/80 mb-8 border-t border-white/10 pt-6">
+                  <li class="flex items-center gap-3"><span class="text-accent">✓</span> Primary & secondary logomarks</li>
+                  <li class="flex items-center gap-3"><span class="text-accent">✓</span> Typography pairing rules</li>
+                  <li class="flex items-center gap-3"><span class="text-accent">✓</span> Color palette specification</li>
+                  <li class="flex items-center gap-3"><span class="text-accent">✓</span> High-res vector exports (SVG, EPS, PNG)</li>
+                  <li class="flex items-center gap-3"><span class="text-accent">✓</span> 15-page quick-reference brand sheet</li>
+                </ul>
+              </div>
+              <a href="#contact" class="w-full text-center py-3.5 px-6 rounded-full border border-white/20 text-paper font-semibold text-xs uppercase tracking-wider hover:bg-white/5 hover:border-white/40 transition-colors">
+                Select Starter
+              </a>
+            </div>
+
+            <!-- Tier 2: Signature (Highlighted) -->
+            <div class="bg-accent text-accent-ink rounded-card p-8 md:p-10 flex flex-col justify-between shadow-[0_0_40px_rgba(198,255,61,0.25)] relative transform lg:-translate-y-4" data-reveal>
+              <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-ink text-accent text-[11px] font-mono uppercase tracking-widest px-4 py-1 rounded-full border border-accent/40 font-bold">
+                Most Popular
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-2xl font-bold">Signature</h3>
+                  <span class="font-mono text-xs text-ink/70">4-5 Weeks</span>
+                </div>
+                <div class="mb-4">
+                  <span class="text-xs font-mono text-ink/70">From</span>
+                  <p class="text-5xl font-bold font-sans">$5,600</p>
+                </div>
+                <p class="text-ink/80 text-sm mb-8 leading-relaxed font-medium">
+                  The complete turnkey identity suite designed to establish market authority and high-tier investor credibility.
+                </p>
+                <ul class="space-y-3 text-sm text-ink/90 mb-8 border-t border-ink/15 pt-6 font-medium">
+                  <li class="flex items-center gap-3"><span>✓</span> Comprehensive logo & icon system</li>
+                  <li class="flex items-center gap-3"><span>✓</span> 60+ Page detailed brand guidelines</li>
+                  <li class="flex items-center gap-3"><span>✓</span> Packaging / stationery tactile specs</li>
+                  <li class="flex items-center gap-3"><span>✓</span> Social media & motion launch kit</li>
+                  <li class="flex items-center gap-3"><span>✓</span> Pitch deck template or Web UI theme</li>
+                  <li class="flex items-center gap-3"><span>✓</span> Full intellectual property ownership</li>
+                </ul>
+              </div>
+              <a href="#contact" class="w-full text-center py-4 px-6 rounded-full bg-ink text-paper font-bold text-xs uppercase tracking-wider hover:bg-ink-2 transition-all hover:scale-[1.02] shadow-lg">
+                Choose Signature ↗
+              </a>
+            </div>
+
+            <!-- Tier 3: Studio Retainer -->
+            <div class="bg-ink-2 rounded-card p-8 md:p-10 border border-white/10 flex flex-col justify-between" data-reveal>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-xl font-semibold text-paper">Studio Custom</h3>
+                  <span class="font-mono text-xs text-stone">Ongoing</span>
+                </div>
+                <div class="mb-4">
+                  <span class="text-xs font-mono text-stone">From</span>
+                  <p class="text-4xl font-bold font-sans text-paper">$4,200<span class="text-sm font-normal text-stone">/mo</span></p>
+                </div>
+                <p class="text-paper/70 text-sm mb-8 leading-relaxed">
+                  Design advisory and ongoing production for funded ventures requiring dedicated creative direction.
+                </p>
+                <ul class="space-y-3 text-sm text-paper/80 mb-8 border-t border-white/10 pt-6">
+                  <li class="flex items-center gap-3"><span class="text-accent">✓</span> Dedicated weekly design bandwidth</li>
+                  <li class="flex items-center gap-3"><span class="text-accent">✓</span> Product packaging & physical collateral</li>
+                  <li class="flex items-center gap-3"><span class="text-accent">✓</span> Campaign assets & creative direction</li>
+                  <li class="flex items-center gap-3"><span class="text-accent">✓</span> Slack-channel priority access</li>
+                  <li class="flex items-center gap-3"><span class="text-accent">✓</span> Unlimited asynchronous revisions</li>
+                </ul>
+              </div>
+              <a href="#contact" class="w-full text-center py-3.5 px-6 rounded-full border border-white/20 text-paper font-semibold text-xs uppercase tracking-wider hover:bg-white/5 hover:border-white/40 transition-colors">
+                Inquire For Retainer
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center mt-12 text-stone text-xs font-mono">
+            Need something custom or flexible milestone payments? <a href="#contact" class="text-accent hover:underline">Let's talk directly.</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. FAQ -->
+      <section id="faq" class="py-24 md:py-36 border-b border-white/10" aria-labelledby="faq-heading">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            <div class="lg:col-span-5" data-reveal>
+              <p class="font-mono text-xs uppercase tracking-[0.2em] text-stone mb-3">07 — Questions</p>
+              <h2 id="faq-heading" class="text-4xl md:text-5xl font-sans font-semibold tracking-tight text-paper mb-6">
+                Frequently asked <span class="font-display italic font-normal text-accent">details</span>.
+              </h2>
+              <p class="text-paper/70 text-base leading-relaxed mb-8">
+                Everything you need to know about timelines, contracts, ownership, and our collaboration cadence.
+              </p>
+              <div class="p-6 bg-ink-2 rounded-card border border-white/10">
+                <p class="text-sm font-semibold text-paper mb-1">Still curious or have custom requirements?</p>
+                <p class="text-xs text-stone mb-4">Direct inbox response within 24 hours.</p>
+                <a href="mailto:hello@emirate.design" class="text-accent text-xs font-mono uppercase tracking-wider hover:underline">hello@emirate.design ↗</a>
+              </div>
+            </div>
+
+            <!-- FAQ Accordions -->
+            <div class="lg:col-span-7 space-y-4" data-reveal>
+              <details class="group bg-ink-2 rounded-card border border-white/10 p-6 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-paper font-semibold text-lg hover:text-accent transition-colors">
+                  <span>How long does a brand identity project typically take?</span>
+                  <i data-lucide="plus" class="w-5 h-5 text-accent shrink-0 ml-4"></i>
+                </summary>
+                <p class="text-paper/70 text-sm mt-4 leading-relaxed pl-1">
+                  Full brand identity sprints typically take 4 to 5 weeks from kick-off to final delivery. Starter logo projects take approximately 2 to 3 weeks. Fast-track timelines are available for time-sensitive funding announcements.
+                </p>
+              </details>
+
+              <details class="group bg-ink-2 rounded-card border border-white/10 p-6 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-paper font-semibold text-lg hover:text-accent transition-colors">
+                  <span>How do revisions and feedback cycles work?</span>
+                  <i data-lucide="plus" class="w-5 h-5 text-accent shrink-0 ml-4"></i>
+                </summary>
+                <p class="text-paper/70 text-sm mt-4 leading-relaxed pl-1">
+                  Every package includes two comprehensive rounds of revisions on the selected direction. Because we spend substantial time aligning on strategy and moodboards during Week 1, our directions consistently hit the mark without endless back-and-forth.
+                </p>
+              </details>
+
+              <details class="group bg-ink-2 rounded-card border border-white/10 p-6 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-paper font-semibold text-lg hover:text-accent transition-colors">
+                  <span>What are the payment and deposit terms?</span>
+                  <i data-lucide="plus" class="w-5 h-5 text-accent shrink-0 ml-4"></i>
+                </summary>
+                <p class="text-paper/70 text-sm mt-4 leading-relaxed pl-1">
+                  We operate on a 50% deposit upon contract signing to lock in the production slot, and the remaining 50% upon final sign-off prior to releasing master production files. Bank wire and major credit cards accepted.
+                </p>
+              </details>
+
+              <details class="group bg-ink-2 rounded-card border border-white/10 p-6 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-paper font-semibold text-lg hover:text-accent transition-colors">
+                  <span>What file formats will I receive upon completion?</span>
+                  <i data-lucide="plus" class="w-5 h-5 text-accent shrink-0 ml-4"></i>
+                </summary>
+                <p class="text-paper/70 text-sm mt-4 leading-relaxed pl-1">
+                  You receive an organized Google Drive archive containing raw vector files (AI, EPS, SVG), digital formats (PNG, JPG, WebP), color modes (RGB, CMYK, Pantone specs), native Figma components, and print-ready PDF packages.
+                </p>
+              </details>
+
+              <details class="group bg-ink-2 rounded-card border border-white/10 p-6 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-paper font-semibold text-lg hover:text-accent transition-colors">
+                  <span>Do you work with international clients across timezones?</span>
+                  <i data-lucide="plus" class="w-5 h-5 text-accent shrink-0 ml-4"></i>
+                </summary>
+                <p class="text-paper/70 text-sm mt-4 leading-relaxed pl-1">
+                  Yes, over 70% of our client base is located in North America, Europe, and Asia-Pacific. We utilize asynchronous Loom video walkthroughs, shared Figma canvases, and flexible call scheduling to make collaboration effortless.
+                </p>
+              </details>
+
+              <details class="group bg-ink-2 rounded-card border border-white/10 p-6 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer list-none text-paper font-semibold text-lg hover:text-accent transition-colors">
+                  <span>Do I own 100% of the rights to the completed designs?</span>
+                  <i data-lucide="plus" class="w-5 h-5 text-accent shrink-0 ml-4"></i>
+                </summary>
+                <p class="text-paper/70 text-sm mt-4 leading-relaxed pl-1">
+                  Absolutely. Upon final payment settlement, full copyright and worldwide commercial intellectual property rights are officially transferred to your entity.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10.5 INTERACTIVE PROJECT SCOPE & INVESTMENT ESTIMATOR -->
+      <section id="estimator" class="py-20 md:py-28 border-b border-white/10 bg-ink-2/40 relative overflow-hidden" aria-labelledby="estimator-heading">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <div class="max-w-3xl mb-12" data-reveal>
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-3">08 — Scope Estimator</p>
+            <h2 id="estimator-heading" class="text-3xl sm:text-5xl font-sans font-semibold tracking-tight text-paper mb-4" style="text-wrap: balance;">
+              Design your project scope, <span class="font-display italic font-normal text-accent">calculate investment</span>.
+            </h2>
+            <p class="text-paper/70 text-sm sm:text-base leading-relaxed">
+              Select the exact deliverables required for your venture to compute real-time pricing and estimated timelines before initiating the brief.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Deliverables Selection Matrix (8 Cols) -->
+            <div class="lg:col-span-8 space-y-3" id="scope-selector-items" data-reveal>
+              <!-- Option 1: Core Brand Identity -->
+              <label class="scope-item flex items-center justify-between p-5 rounded-2xl bg-ink-2 border border-white/10 hover:border-accent/50 cursor-pointer transition-all duration-200 select-none has-[:checked]:border-accent has-[:checked]:bg-accent/5">
+                <div class="flex items-start gap-4">
+                  <input type="checkbox" class="scope-checkbox mt-1 w-4 h-4 rounded text-accent bg-ink border-white/20 focus:ring-accent accent-[#C6FF3D]" data-name="Brand Identity System" data-price="4200" data-weeks="3" checked />
+                  <div>
+                    <span class="text-base font-semibold text-paper block">Holistic Brand Identity Architecture</span>
+                    <span class="text-xs text-stone leading-relaxed block mt-0.5">Core symbol, customized wordmark, color theory, and typographic hierarchy.</span>
+                  </div>
+                </div>
+                <div class="text-right shrink-0 ml-4">
+                  <span class="text-accent font-mono text-sm font-semibold block">+$4,200</span>
+                  <span class="text-[11px] font-mono text-stone">+3 weeks</span>
+                </div>
+              </label>
+
+              <!-- Option 2: Brand Guidelines Book -->
+              <label class="scope-item flex items-center justify-between p-5 rounded-2xl bg-ink-2 border border-white/10 hover:border-accent/50 cursor-pointer transition-all duration-200 select-none has-[:checked]:border-accent has-[:checked]:bg-accent/5">
+                <div class="flex items-start gap-4">
+                  <input type="checkbox" class="scope-checkbox mt-1 w-4 h-4 rounded text-accent bg-ink border-white/20 focus:ring-accent accent-[#C6FF3D]" data-name="Brand Guidelines (60pp)" data-price="1400" data-weeks="1" checked />
+                  <div>
+                    <span class="text-base font-semibold text-paper block">Comprehensive Brand Guidelines Handbook (60+ pp)</span>
+                    <span class="text-xs text-stone leading-relaxed block mt-0.5">Exhaustive documentation on layout grids, co-branding, do's & don'ts, and asset library.</span>
+                  </div>
+                </div>
+                <div class="text-right shrink-0 ml-4">
+                  <span class="text-accent font-mono text-sm font-semibold block">+$1,400</span>
+                  <span class="text-[11px] font-mono text-stone">+1 week</span>
+                </div>
+              </label>
+
+              <!-- Option 3: Tactile Packaging & Dielines -->
+              <label class="scope-item flex items-center justify-between p-5 rounded-2xl bg-ink-2 border border-white/10 hover:border-accent/50 cursor-pointer transition-all duration-200 select-none has-[:checked]:border-accent has-[:checked]:bg-accent/5">
+                <div class="flex items-start gap-4">
+                  <input type="checkbox" class="scope-checkbox mt-1 w-4 h-4 rounded text-accent bg-ink border-white/20 focus:ring-accent accent-[#C6FF3D]" data-name="Packaging & Dielines" data-price="2400" data-weeks="2" />
+                  <div>
+                    <span class="text-base font-semibold text-paper block">Bespoke Product Packaging & Production Dielines</span>
+                    <span class="text-xs text-stone leading-relaxed block mt-0.5">Structural dieline engineering, print finish callouts (foil, emboss, spot UV), and 3D renders.</span>
+                  </div>
+                </div>
+                <div class="text-right shrink-0 ml-4">
+                  <span class="text-accent font-mono text-sm font-semibold block">+$2,400</span>
+                  <span class="text-[11px] font-mono text-stone">+2 weeks</span>
+                </div>
+              </label>
+
+              <!-- Option 4: Social & Motion Kit -->
+              <label class="scope-item flex items-center justify-between p-5 rounded-2xl bg-ink-2 border border-white/10 hover:border-accent/50 cursor-pointer transition-all duration-200 select-none has-[:checked]:border-accent has-[:checked]:bg-accent/5">
+                <div class="flex items-start gap-4">
+                  <input type="checkbox" class="scope-checkbox mt-1 w-4 h-4 rounded text-accent bg-ink border-white/20 focus:ring-accent accent-[#C6FF3D]" data-name="Social & Motion Kit" data-price="1600" data-weeks="1" />
+                  <div>
+                    <span class="text-base font-semibold text-paper block">Motion-Ready Social & Campaign Kit</span>
+                    <span class="text-xs text-stone leading-relaxed block mt-0.5">Figma component templates, animated kinetic typographic assets, and launch poster formats.</span>
+                  </div>
+                </div>
+                <div class="text-right shrink-0 ml-4">
+                  <span class="text-accent font-mono text-sm font-semibold block">+$1,600</span>
+                  <span class="text-[11px] font-mono text-stone">+1 week</span>
+                </div>
+              </label>
+
+              <!-- Option 5: Investor Pitch Deck -->
+              <label class="scope-item flex items-center justify-between p-5 rounded-2xl bg-ink-2 border border-white/10 hover:border-accent/50 cursor-pointer transition-all duration-200 select-none has-[:checked]:border-accent has-[:checked]:bg-accent/5">
+                <div class="flex items-start gap-4">
+                  <input type="checkbox" class="scope-checkbox mt-1 w-4 h-4 rounded text-accent bg-ink border-white/20 focus:ring-accent accent-[#C6FF3D]" data-name="Investor Pitch Deck" data-price="2100" data-weeks="1.5" />
+                  <div>
+                    <span class="text-base font-semibold text-paper block">High-Stakes Investor Pitch Deck (20 Slides)</span>
+                    <span class="text-xs text-stone leading-relaxed block mt-0.5">Narrative visual storytelling, data visualization diagrams, and executive presentation deck.</span>
+                  </div>
+                </div>
+                <div class="text-right shrink-0 ml-4">
+                  <span class="text-accent font-mono text-sm font-semibold block">+$2,100</span>
+                  <span class="text-[11px] font-mono text-stone">+1.5 weeks</span>
+                </div>
+              </label>
+
+              <!-- Option 6: Digital Flagship Web UI -->
+              <label class="scope-item flex items-center justify-between p-5 rounded-2xl bg-ink-2 border border-white/10 hover:border-accent/50 cursor-pointer transition-all duration-200 select-none has-[:checked]:border-accent has-[:checked]:bg-accent/5">
+                <div class="flex items-start gap-4">
+                  <input type="checkbox" class="scope-checkbox mt-1 w-4 h-4 rounded text-accent bg-ink border-white/20 focus:ring-accent accent-[#C6FF3D]" data-name="Digital Flagship Web UI" data-price="3500" data-weeks="2.5" />
+                  <div>
+                    <span class="text-base font-semibold text-paper block">Digital Flagship Web UI System (Figma & Tokens)</span>
+                    <span class="text-xs text-stone leading-relaxed block mt-0.5">Interactive responsive layout components, design tokens, and editorial landing experience.</span>
+                  </div>
+                </div>
+                <div class="text-right shrink-0 ml-4">
+                  <span class="text-accent font-mono text-sm font-semibold block">+$3,500</span>
+                  <span class="text-[11px] font-mono text-stone">+2.5 weeks</span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Sticky Calculated Output Panel (4 Cols) -->
+            <div class="lg:col-span-4 lg:sticky lg:top-28 bg-ink rounded-card p-6 sm:p-8 border border-accent/40 shadow-[0_0_30px_rgba(198,255,61,0.12)] relative overflow-hidden" data-reveal>
+              <div class="text-[10px] font-mono text-stone uppercase tracking-widest mb-1">Live Estimated Total</div>
+              <div class="text-4xl sm:text-5xl font-sans font-bold text-accent mb-2 tabular-nums" id="scope-price-display">$5,600</div>
+              <div class="flex items-center gap-2 text-xs font-mono text-stone mb-6">
+                <span>ESTIMATED DELIVERY:</span>
+                <span class="text-paper font-semibold tabular-nums" id="scope-timeline-display">4–5 WEEKS</span>
+              </div>
+
+              <!-- Selected Scope Badges -->
+              <div class="border-t border-white/10 pt-4 mb-6">
+                <span class="text-[11px] font-mono text-stone uppercase tracking-wider block mb-2">Selected Inclusions:</span>
+                <div class="flex flex-wrap gap-1.5" id="scope-pills-list">
+                  <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-[11px] font-mono text-paper/80">Brand Identity System</span>
+                  <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-[11px] font-mono text-paper/80">Brand Guidelines (60pp)</span>
+                </div>
+              </div>
+
+              <!-- Delivery Cadence Toggle -->
+              <div class="mb-6 pt-4 border-t border-white/10">
+                <span class="text-[11px] font-mono text-stone uppercase tracking-wider block mb-2">Production Cadence:</span>
+                <div class="grid grid-cols-2 gap-2" id="speed-toggle-group">
+                  <button type="button" class="speed-btn active px-3 py-2 rounded-xl text-xs font-mono text-center border border-accent text-accent bg-accent/10 font-semibold transition-colors" data-speed="1.0">Standard</button>
+                  <button type="button" class="speed-btn px-3 py-2 rounded-xl text-xs font-mono text-center border border-white/10 text-stone hover:text-paper transition-colors" data-speed="1.2">Express (+20%)</button>
+                </div>
+              </div>
+
+              <!-- Apply to Brief Button -->
+              <button type="button" id="apply-scope-btn" class="w-full py-4 rounded-xl bg-accent text-accent-ink font-semibold text-xs uppercase tracking-widest hover:scale-[1.02] transition-transform shadow-[0_0_20px_rgba(198,255,61,0.25)] flex items-center justify-center gap-2">
+                <span>Apply Scope to Brief ↓</span>
+              </button>
+              <p class="text-[10px] font-mono text-stone/70 text-center mt-3">Auto-fills the inquiry form below with your estimate</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. FINAL CTA + CONTACT -->
+      <section id="contact" class="py-24 md:py-36 relative" aria-labelledby="contact-heading">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <div class="bg-gradient-to-br from-ink-2 via-ink-2 to-[#191e12] rounded-card p-8 sm:p-12 md:p-20 border border-white/10 relative overflow-hidden shadow-2xl" data-reveal>
+            <!-- Background Accent Glow -->
+            <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-accent/20 rounded-full blur-[140px] pointer-events-none" aria-hidden="true"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start relative z-10">
+              <!-- Left Copy & Direct Contact -->
+              <div class="lg:col-span-6">
+                <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-4">Start a conversation</p>
+                <h2 id="contact-heading" class="text-4xl sm:text-6xl lg:text-7xl font-sans font-semibold tracking-tight text-paper mb-6" style="text-wrap: balance;">
+                  Let's make something <span class="font-display italic font-normal text-accent">unforgettable</span>.
+                </h2>
+                <p class="text-paper/75 text-base sm:text-lg mb-8 leading-relaxed max-w-md">
+                  Tell me about your product, your timeline, and where you want to take your brand. I'll reply with strategic thoughts and availability within 24 hours.
+                </p>
+
+                <!-- Click to copy email box -->
+                <div class="p-4 bg-white/5 border border-white/10 rounded-2xl inline-flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                  <div>
+                    <span class="block text-[11px] font-mono text-stone uppercase tracking-wider">Direct Email</span>
+                    <span id="copy-email-text" class="text-base font-mono text-paper font-medium">hello@emirate.design</span>
+                  </div>
+                  <button id="copy-email-btn" class="px-4 py-2 bg-white/10 hover:bg-accent hover:text-accent-ink rounded-xl text-xs font-mono transition-colors text-paper flex items-center gap-1.5 cursor-pointer"><i data-lucide="copy" class="w-3.5 h-3.5"></i><span>Copy Address</span></button>
+                </div>
+                <div id="copy-toast" class="text-accent text-xs font-mono mt-2 opacity-0 transition-opacity">✓ Copied to clipboard</div>
+              </div>
+
+              <!-- Right Contact Form -->
+              <div class="lg:col-span-6 bg-ink/70 backdrop-blur-xl p-6 sm:p-8 rounded-2xl border border-white/10">
+                <form id="contact-form" class="space-y-5" novalidate>
+                  <div>
+                    <label for="name" class="block text-xs font-mono uppercase tracking-wider text-stone mb-1.5">Your Name *</label>
+                    <input type="text" id="name" required placeholder="Elena Rostova" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-paper placeholder-white/20 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all" />
+                  </div>
+
+                  <div>
+                    <label for="email" class="block text-xs font-mono uppercase tracking-wider text-stone mb-1.5">Email Address *</label>
+                    <input type="email" id="email" required placeholder="elena@company.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-paper placeholder-white/20 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all" />
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label for="project-type" class="block text-xs font-mono uppercase tracking-wider text-stone mb-1.5">Project Type</label>
+                      <select id="project-type" class="w-full bg-ink border border-white/10 rounded-xl px-4 py-3 text-sm text-paper focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
+                        <option value="brand-identity">Brand Identity Suite</option>
+                        <option value="logo-design">Logo & Wordmark</option>
+                        <option value="packaging">Packaging & Print</option>
+                        <option value="campaign">Social / Campaign</option>
+                        <option value="custom">Other / Custom</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="budget" class="block text-xs font-mono uppercase tracking-wider text-stone mb-1.5">Budget Range</label>
+                      <select id="budget" class="w-full bg-ink border border-white/10 rounded-xl px-4 py-3 text-sm text-paper focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
+                        <option value="2k-5k">$2,800 – $5,000</option>
+                        <option value="5k-10k" selected>$5,000 – $10,000</option>
+                        <option value="10k-plus">$10,000+</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="message" class="block text-xs font-mono uppercase tracking-wider text-stone mb-1.5">Project Context & Goals *</label>
+                    <textarea id="message" rows="3" required placeholder="Describe your product, timeline, and current design challenge..." class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-paper placeholder-white/20 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"></textarea>
+                  </div>
+
+                  <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-accent text-accent-ink font-semibold text-xs uppercase tracking-widest hover:scale-[1.01] transition-transform shadow-[0_0_24px_rgba(198,255,61,0.25)] flex items-center justify-center gap-2">
+                    <span id="btn-text">Transmit Project Brief ↗</span>
+                    <span id="btn-spinner" class="hidden w-4 h-4 border-2 border-ink border-t-transparent rounded-full animate-spin"></span>
+                  </button>
+
+                  <div id="form-success" class="hidden p-4 bg-accent/10 border border-accent/30 rounded-xl text-center">
+                    <p class="text-accent font-semibold text-sm">Brief Transmitted Successfully.</p>
+                    <p class="text-paper/70 text-xs mt-1">Thank you. Emirate will review and reply within 24 hours.</p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 12. FOOTER -->
+    <footer class="border-t border-white/10 pt-20 pb-12 bg-ink overflow-hidden" role="contentinfo">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+          <div class="md:col-span-5">
+            <span class="font-sans font-bold text-2xl text-paper tracking-tight">Emirate<span class="text-stone font-normal">.Studio</span></span>
+            <p class="text-paper/60 text-sm mt-3 max-w-sm leading-relaxed">
+              Emirate — Ideas Made Visual. Independent brand identity practice dedicated to creating iconic, high-retention visual systems worldwide.
+            </p>
+          </div>
+
+          <div class="md:col-span-3">
+            <p class="font-mono text-xs uppercase tracking-widest text-stone mb-4">Navigation</p>
+            <ul class="space-y-2 text-sm text-paper/70">
+              <li><a href="#work" class="hover:text-accent transition-colors">Selected Work</a></li>
+              <li><a href="#services" class="hover:text-accent transition-colors">Services & Capabilities</a></li>
+              <li><a href="#process" class="hover:text-accent transition-colors">Design Process</a></li>
+              <li><a href="#pricing" class="hover:text-accent transition-colors">Pricing & Packages</a></li>
+              <li><a href="#faq" class="hover:text-accent transition-colors">Frequently Asked</a></li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-4 flex flex-col justify-between">
+            <div>
+              <p class="font-mono text-xs uppercase tracking-widest text-stone mb-4">Connect</p>
+              <div class="flex items-center gap-4 text-paper/70">
+                <!-- Behance -->
+                <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-accent hover:text-accent transition-colors" aria-label="Behance Profile">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-4.225 0-6.625-2.909-6.625-6.787 0-4.043 2.656-6.713 6.444-6.713 4.024 0 5.86 2.894 5.58 6.5h-9.35c.101 2.217 1.488 3.82 3.654 3.82 1.777 0 2.821-.926 3.167-2.12h2.231zm-6.657-5.5h6.643c-.114-1.637-1.129-3.08-3.232-3.08-2.028 0-3.181 1.341-3.411 3.08zm-12.069 7.5h-5v-14h5.568c2.81 0 4.932.88 4.932 3.58 0 1.542-.767 2.627-1.996 3.092 1.564.444 2.496 1.751 2.496 3.628 0 2.923-2.383 3.7-5.068 3.7zm-2.8-8.257h2.529c1.479 0 2.371-.484 2.371-1.743 0-1.309-1.021-1.743-2.371-1.743h-2.529v3.486zm0 6h2.721c1.554 0 2.579-.584 2.579-1.963 0-1.428-1.025-1.963-2.579-1.963h-2.721v3.926z"/></svg>
+                </a>
+                <!-- Dribbble -->
+                <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-accent hover:text-accent transition-colors" aria-label="Dribbble Profile">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm10.163 11.235c-1.89-.379-3.79-.387-5.698-.023-.178-.423-.364-.844-.56-1.261 2.678-1.365 4.887-3.328 6.258-5.716 1.096 1.999 1.71 4.298 1.71 6.745 0 .085-.004.17-.008.255zm-1.821-7.854c-1.258 2.228-3.313 4.053-5.792 5.323-1.265-2.339-2.748-4.522-4.417-6.495 1.189-.481 2.484-.75 3.867-.75 2.38 0 4.568.802 6.342 2.158v-.236zm-8.877-1.94c1.642 1.94 3.102 4.088 4.346 6.388-2.602 1.109-5.467 1.838-8.497 2.153-.021-.07-.04-.141-.061-.212 1.341-2.632 2.766-5.485 4.212-8.329zm-6.223 3.01c-.017.037-.034.075-.052.112-1.391 2.742-2.763 5.488-4.048 8.019-.747-1.468-1.169-3.13-1.169-4.886 0-1.892.493-3.666 1.353-5.203 1.161.737 2.502 1.411 3.916 1.958zm-3.242 10.662c1.233-2.43 2.548-5.068 3.882-7.702 2.771-.274 5.399-.933 7.784-1.936.425.908.825 1.83 1.198 2.763-4.137 1.637-7.469 4.382-9.761 7.925-1.416-.27-2.152-.619-3.103-1.05zm10.74 7.433c-3.141 0-5.992-1.229-8.113-3.238 2.083-3.279 5.127-5.836 8.905-7.391.733 1.939 1.332 3.931 1.782 5.955-1.134.428-2.359.674-3.642.674zm5.541-1.932c-.415-1.874-.967-3.717-1.644-5.511 1.706-.312 3.407-.297 5.099.043-.654 2.196-1.91 4.103-3.455 5.468z"/></svg>
+                </a>
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-accent hover:text-accent transition-colors" aria-label="Instagram Profile">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-accent hover:text-accent transition-colors" aria-label="LinkedIn Profile">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Back to top -->
+            <button id="back-to-top" class="mt-8 text-xs font-mono text-stone hover:text-accent flex items-center gap-2 self-start focus-visible:ring-2 ring-accent cursor-pointer"><span>Back to top</span><i data-lucide="arrow-up" class="w-3.5 h-3.5"></i></button>
+          </div>
+        </div>
+
+        <!-- Giant Crop Wordmark (Decorative) -->
+        <div class="pt-16 overflow-hidden select-none pointer-events-none" aria-hidden="true">
+          <div class="text-[14vw] font-sans font-bold tracking-tighter text-white/[0.03] leading-none whitespace-nowrap -mb-10 text-center">
+            EMIRATE.STUDIO
+          </div>
+        </div>
+
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-stone/60">
+          <p>© 2026 Emirate — Ideas Made Visual. All rights reserved.</p>
+          <p class="mt-2 sm:mt-0">Designed & engineered with clean vanilla craft.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 13. INTERACTIVE CASE STUDY DEEP DIVE MODAL -->
+    <div id="case-study-modal" class="fixed inset-0 z-50 bg-ink/90 backdrop-blur-2xl flex items-center justify-center p-3 sm:p-6 opacity-0 pointer-events-none transition-all duration-300" role="dialog" aria-modal="true" aria-labelledby="modal-project-title" aria-hidden="true">
+      <div class="max-w-5xl w-full max-h-[92vh] overflow-y-auto bg-ink-2 border border-white/15 rounded-card p-6 sm:p-10 text-paper relative shadow-2xl custom-scrollbar" id="modal-content-container">
+        <!-- Modal Top Bar -->
+        <div class="flex items-center justify-between pb-6 border-b border-white/10 mb-8">
+          <div class="flex items-center gap-3">
+            <span class="font-mono text-xs text-accent uppercase tracking-widest font-bold" id="modal-counter">01 / 06</span>
+            <span class="text-stone">·</span>
+            <span class="font-mono text-xs text-stone uppercase tracking-wider" id="modal-category">Brand Identity</span>
+          </div>
+
+          <!-- Modal Navigation & Close -->
+          <div class="flex items-center gap-2">
+            <button id="modal-prev-btn" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-paper hover:border-accent hover:text-accent transition-colors cursor-pointer" aria-label="Previous project"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
+            <button id="modal-next-btn" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-paper hover:border-accent hover:text-accent transition-colors cursor-pointer" aria-label="Next project"><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+            <button id="modal-close-btn" class="w-10 h-10 rounded-full bg-white/5 border border-white/20 flex items-center justify-center text-paper hover:bg-accent hover:text-accent-ink hover:border-accent transition-colors ml-2 cursor-pointer" aria-label="Close case study modal"><i data-lucide="x" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+
+        <!-- Project Header -->
+        <div class="mb-8">
+          <div class="flex flex-wrap items-center gap-3 text-xs font-mono text-stone mb-3">
+            <span id="modal-client" class="text-paper font-semibold">Client Name</span>
+            <span>·</span>
+            <span id="modal-location">Location</span>
+            <span>·</span>
+            <span id="modal-year">2026</span>
+          </div>
+          <h2 id="modal-project-title" class="text-3xl sm:text-5xl font-sans font-semibold tracking-tight text-paper mb-4" style="text-wrap: balance;">
+            Project Title
+          </h2>
+        </div>
+
+        <!-- Full-Bleed Artwork Display -->
+        <div class="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden border border-white/15 mb-10 bg-ink">
+          <img id="modal-image" src="" alt="Case study full-scale visual" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Two Column Deep Dive Narrative -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-10 border-b border-white/10">
+          <!-- Left Column: Challenge & Solution -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <span class="font-mono text-xs uppercase tracking-widest text-accent block mb-2">The Strategic Challenge</span>
+              <p id="modal-challenge" class="text-paper/80 text-sm sm:text-base leading-relaxed">
+                Challenge description goes here.
+              </p>
+            </div>
+            <div>
+              <span class="font-mono text-xs uppercase tracking-widest text-accent block mb-2">Creative Direction & Execution</span>
+              <p id="modal-solution" class="text-paper/80 text-sm sm:text-base leading-relaxed">
+                Solution description goes here.
+              </p>
+            </div>
+
+            <!-- Client Quote -->
+            <div class="p-6 bg-white/5 rounded-2xl border border-white/10 mt-6">
+              <blockquote id="modal-quote" class="font-display italic text-lg sm:text-xl text-paper mb-2">
+                "Quote goes here."
+              </blockquote>
+              <span id="modal-quote-author" class="font-mono text-xs text-stone block">Client Author</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Specs, Typography & Swatches -->
+          <div class="lg:col-span-5 space-y-6">
+            <!-- Typographic Architecture -->
+            <div class="p-5 bg-ink rounded-2xl border border-white/10">
+              <span class="font-mono text-xs uppercase tracking-widest text-stone block mb-2">Typographic Architecture</span>
+              <p id="modal-typespec" class="font-mono text-xs text-paper/90 leading-relaxed">
+                Instrument Serif Italic · Inter Tight Medium · JetBrains Mono
+              </p>
+            </div>
+
+            <!-- Color Palette Swatches -->
+            <div class="p-5 bg-ink rounded-2xl border border-white/10">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-mono text-xs uppercase tracking-widest text-stone">Color & Material Palette</span>
+                <span class="text-[10px] font-mono text-accent">Click hex to copy</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2" id="modal-swatches-container">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+
+            <!-- Deliverables List -->
+            <div>
+              <span class="font-mono text-xs uppercase tracking-widest text-stone block mb-3">Delivered Assets:</span>
+              <div class="flex flex-wrap gap-2" id="modal-deliverables-list">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Bottom Actions -->
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <span class="font-mono text-xs text-stone">Need a similar design system for your product?</span>
+          <button id="modal-cta-btn" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-accent text-accent-ink font-semibold text-xs uppercase tracking-widest hover:scale-105 transition-transform shadow-[0_0_20px_rgba(198,255,61,0.25)]">
+            Start a project like this ↗
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bundled & Cached Module Entry -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
